@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam Tomek | Služby</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
+            color: #ecf0f1;
+        }
+        .card {
+            background: rgba(30, 30, 50, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+        }
+        .service-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 15px;
+            margin-top: 10px;
+            text-align: left;
+        }
+        #services-section {
+            display: none;
+            animation: fadeIn 0.4s ease forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="p-4">
+
+    <div class="card max-w-sm w-full p-8 text-center shadow-2xl">
+        <div class="w-20 h-20 bg-gradient-to-tr from-cyan-400 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-extrabold text-white shadow-lg">
+            AT
+        </div>
+
+        <h1 class="text-2xl font-bold mb-1 text-white">Adam Tomek</h1>
+        <p class="text-purple-300 mb-6 uppercase tracking-widest text-[10px] font-bold">Discord & Web Developer</p>
+
+        <div class="space-y-2">
+            <a href="https://www.instagram.com/adam.tomek.52" target="_blank" class="flex items-center gap-3 p-3 bg-white/5 hover:bg-white/10 rounded-xl transition-all border border-white/5">
+                <span class="text-lg">📸</span>
+                <span class="text-sm">Instagram: adam.tomek.52</span>
+            </a>
+
+            <a href="mailto:adamtomek52@seznam.cz" class="flex items-center gap-3 p-3 bg-white/5 hover:bg-white/10 rounded-xl transition-all border border-white/5">
+                <span class="text-lg">✉️</span>
+                <span class="text-sm italic text-blue-300">adamtomek010@seznam.cz</span>
+            </a>
+
+            <div class="flex items-center gap-3 p-3 bg-indigo-500/10 rounded-xl border border-indigo-500/20">
+                <span class="text-lg">🎮</span>
+                <span class="text-sm font-semibold">Discord: Lil Adam</span>
+            </div>
+
+            <button onclick="toggleServices()" class="w-full mt-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:scale-[1.02] active:scale-95 text-white p-3 rounded-xl font-bold shadow-lg transition-all">
+                🚀 Zobrazit moje služby
+            </button>
+        </div>
+
+        <div id="services-section" class="mt-6">
+            <div class="service-box">
+                <h3 class="font-bold text-cyan-400">💬 Discord na míru</h3>
+                <p class="text-xs text-gray-300 mt-1">Nastavení rolí, botů a kompletní struktury serveru.</p>
+            </div>
+
+            <div class="service-box">
+                <h3 class="font-bold text-purple-400">🌐 Tvorba Webů</h3>
+                <p class="text-xs text-gray-300 mt-1">Osobní vizitky a moderní weby přesně podle zadání.</p>
+            </div>
+            
+            <div class="mt-6 p-4 bg-white/5 rounded-xl border border-dashed border-white/20">
+                <p class="text-sm font-semibold text-green-400">💰 Cena:</p>
+                <p class="text-xs text-gray-300 mt-1 italic">Na ceně se domluvíme individuálně podle náročnosti.</p>
+                <p class="mt-3 text-xs text-white">Pokud máte zájem, budu rád, když se mi ozvete na e-mail nebo Instagram!</p>
+            </div>
+        </div>
+
+        <footer class="mt-8 text-[9px] text-gray-500 uppercase tracking-widest">
+            © 2024 Adam Tomek
+        </footer>
+    </div>
+
+    <script>
+        function toggleServices() {
+            const section = document.getElementById('services-section');
+            section.style.display = section.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+
+</body>
+</html>
